@@ -1,0 +1,20 @@
+{
+  "name": "killyouare/debug-service",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "killyouare\\DebugService\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "killyouare",
+      "email": "ya.ilyaku@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.0",
+    "egal/framework": "2.2.0"
+  }
+}
