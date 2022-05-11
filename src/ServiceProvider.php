@@ -1,6 +1,6 @@
 <?php
 
-namespace Killyouare\ServiceProvider;
+namespace Killyouare\DebugService;
 
 use Egal\Model\ModelManager;
 use Illuminate\Support\ServiceProvider as ModelServiceProvider;
