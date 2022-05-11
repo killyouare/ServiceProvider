@@ -3,7 +3,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "killyouare\\DebugService\\": "src/"
+      "Killyouare\\DebugService\\": "src/"
     }
   },
   "authors": [
