@@ -24,11 +24,14 @@ class ServiceProvider extends ModelServiceProvider
 
     private function getConfig()
     {
+        // добавить проверку на не пустоту массива
+        // + наличие необходимых параметров можно проверить здесь
         $this->config = config("debug");
     }
 
     private function getNameSpace(): void
     {
+        // добавить проверку на существование debugDir
         $splicedDirPath = explode("/", $this->config['debugDir']);
 
         $updatedPath = array_map(fn ($item) => ucfirst($item), $splicedDirPath);
@@ -38,6 +41,7 @@ class ServiceProvider extends ModelServiceProvider
 
     protected function scanModels(?string $dir = null): void
     {
+        // добавить проверку на существование debugDir
         $debugDir = $this->config['debugDir'];
         $baseDir = base_path($debugDir);
         $dir = $dir ?? $baseDir;
@@ -75,6 +79,7 @@ class ServiceProvider extends ModelServiceProvider
 
     public function register(): void
     {
+        // уменьшить вложенность
         if ($this->config['include']) {
             foreach ($this->models as $model) {
                 ModelManager::loadModel($model);
